@@ -5,7 +5,7 @@ function VodList() {
   return (
     <main className='container-fluid'>
       <div className='container'>
-        <h2>List of TV shows: </h2>
+        <h2 className='py-3'>List of TV shows: </h2>
         <div className='row'>
           <VodItem />
           <VodItem />
