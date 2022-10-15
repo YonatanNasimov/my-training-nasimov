@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Home from './components/home';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='text-danger'>react work222</h1>
-    </div>
+    <React.Fragment>
+      <Home/>
+    </React.Fragment>
   );
 }
 
