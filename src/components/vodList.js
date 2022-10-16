@@ -1,22 +1,17 @@
 import React from 'react'
 import VodItem from './vodItem'
 
-function VodList() {
+function VodList(props) {
   return (
-    <main className='container-fluid'>
+    <main style={{minHeight:"600px"}} className='container-fluid py-5'>
       <div className='container'>
-        <h2 className='py-3'>List of TV shows: </h2>
+        <h2>List of TV shows: </h2>
         <div className='row'>
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
+          {props.vod_ar.map(item => {
+            return(
+              <VodItem key={item.imdbId} item={item} />
+            )
+          })}
         </div>
       </div>
     </main>

@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer style={{minHeight:"48px"}} className='container-fluid bg-dark p-2 text-white text-center'>
       <div className='container'>
-        Made by Jonathan Nasimov 2022 ©
+        Made by Yonathan Nasimov 2022 ©
       </div>
     </footer>
   )
