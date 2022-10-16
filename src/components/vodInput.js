@@ -5,7 +5,7 @@ function VodInput() {
     <header style={{background:"black"}} className='container-fluid p-2'>
       <div className='container'>
         <div className='row'>
-          <div className='logo col-auto border'>
+          <div className='col-md-1 mx-auto logo col-auto border'>
             <h2 className='text-white'>V.O.D</h2>
           </div>
           <nav className='d-flex col-md-11'>
