@@ -5,9 +5,9 @@ function MovieInfo(props) {
     const params = useParams();
 
     return (
-        <main className='container' style={{ minHeight: "600px" }}>
-            
-        </main>
+        <div className='container'>
+
+        </div>
     )
 }
 
