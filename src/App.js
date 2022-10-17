@@ -12,10 +12,7 @@ function App() {
       <VodInput />
       <Routes>
         <Route index element={<Home />} />
-        <Route path='/vip/:id' element={<MovieInfo />} />
-        <Route path='/*' element={<div>
-          <h2>page is fund, 404!</h2>
-        </div>} />
+        <Route path='/info/:id' element={<MovieInfo />} />
       </Routes>
       <Footer />
     </BrowserRouter>
