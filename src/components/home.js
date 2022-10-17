@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import Footer from './footer'
-import VodInput from './vodInput'
+import {useSearchParams} from "react-router-dom"
 import VodList from './vodList'
 import VodStrip from './vodStrip'
 
 import "./style/home.css"
 
 function Home() {
-
+  const [querys] = useSearchParams();
   const [ar, setAr] = useState([]);
 
   useEffect(() => {
-    doApi("batman")
+    let searchQ = querys.get("s") || "dragonball"
+    doApi(searchQ)
   },[]);
 
   const doApi = async(_searchQ) => {
@@ -23,10 +23,10 @@ function Home() {
   }
   return (
     <React.Fragment>
+       
         <VodStrip/>
-        <VodInput/>
         <VodList vod_ar={ar}/>
-        <Footer/>
+       
     </React.Fragment>
   )
 }

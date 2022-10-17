@@ -1,12 +1,19 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from './components/home';
+import  VodInput from './components/vodInput';
+import Footer from './components/footer'
+import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
-      <Home/>
-    </React.Fragment>
+    <BrowserRouter>
+      <VodInput/>
+      <Routes>
+        <Route index element={<Home/>} />
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
   );
 }
 
