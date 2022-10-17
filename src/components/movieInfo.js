@@ -1,10 +1,12 @@
 import React from 'react'
 
-function MovieInfo() {
+function MovieInfo(props) {
+
+    let movieId = props.match.pa
     return (
-        <div>
+        <main style={{minHeight:"600px"}}>
             movieInfo
-        </div>
+        </main>
     )
 }
 
