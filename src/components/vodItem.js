@@ -10,7 +10,7 @@ function VodItem(props) {
                 <div className='p-2'>
                     <h4>{item.Title}</h4>
                     <p><strong>Year:</strong> {item.Year}</p>
-                    <button className='btn btn-dark'>More info</button>
+                    <button style={{display:'flex',alignItems:"flex-end"}} className='btn btn-dark'>More info</button>
                 </div>
             </div>
         </article>

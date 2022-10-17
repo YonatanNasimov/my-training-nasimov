@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     let searchQ = querys.get("s") || "dragonball"
     doApi(searchQ)
-  },[]);
+  },[querys]);
 
   const doApi = async(_searchQ) => {
     let myUrl = `http://www.omdbapi.com/?s=${_searchQ}&apikey=5a292f28`;
