@@ -5,6 +5,12 @@ function VodInput() {
   const inputRef = useRef();
   const nav = useNavigate();
 
+  const onKeyboardClick = (e) =>{
+    if(e.key == "Enter"){
+      onSearchClick();
+    }
+  }
+
   const onSearchClick = () => {
     let input_val = inputRef.current.value;
     nav(`/?s=${input_val}`)
@@ -19,7 +25,7 @@ function VodInput() {
             <h2 className='text-white'>V.O.D</h2>
           </div>
           <nav className='d-flex col-md-11'>
-            <input ref={inputRef} placeholder='search for movie or game...' type={'search'} className="form-control" />
+            <input onKeyDown={onKeyboardClick} ref={inputRef} placeholder='search for movie or game...' type={'search'} className="form-control" />
             <button onClick={onSearchClick} className='btn btn-warning'>Search</button>
           </nav>
         </div>
