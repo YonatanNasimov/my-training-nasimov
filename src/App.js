@@ -13,10 +13,13 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path='/info/:id' element={<MovieInfo />} />
+        <Route path='/*' element={<div className='container' style={{minHeight:"600px"}}>
+          <h2>The page was not found, 404!</h2>
+        </div>} />
       </Routes>
       <Footer />
     </BrowserRouter>
   );
 }
-
+//style={{display:"flex",alignItems:"center",textAlign:"center",justifyContent:"center"}}
 export default App;

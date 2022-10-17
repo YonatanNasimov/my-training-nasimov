@@ -5,7 +5,7 @@ function MovieInfo(props) {
     const params = useParams();
     const [qurey] = useSearchParams();
     return (
-        <main style={{ minHeight: "600px" }}>
+        <main className='container' style={{ minHeight: "600px" }}>
          <h2> movieInfo -- {params.id}</h2>  
         </main>
     )
