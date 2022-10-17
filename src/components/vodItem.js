@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function VodItem(props) {
 
@@ -10,7 +11,7 @@ function VodItem(props) {
                 <div className='p-2'>
                     <h4>{item.Title}</h4>
                     <p><strong>Year:</strong> {item.Year}</p>
-                    <button style={{display:'flex',alignItems:"flex-end"}} className='btn btn-dark'>More info</button>
+                    <Link to={"/info/"+item.imdbID} className='btn btn-dark'>More info</Link>
                 </div>
             </div>
         </article>
