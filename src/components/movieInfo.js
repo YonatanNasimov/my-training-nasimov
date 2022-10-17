@@ -6,16 +6,7 @@ function MovieInfo(props) {
 
     return (
         <main className='container' style={{ minHeight: "600px" }}>
-            <article className='mx-auto col-md-8 border shadow overflow-hiden h-100'>
-                <div style={{background:"yellow"}} className='col-md-5 float-start'></div>
-                
-                <div className='bg-dark text-white col-md-7 p-2'>
-                    <h2>movie name</h2>
-                    <p><strong>Runtime: </strong>100min</p>
-                    <p><strong>Genere: </strong>Action</p>
-                    <p><strong>Float: </strong>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
-                </div>
-            </article>
+            
         </main>
     )
 }
