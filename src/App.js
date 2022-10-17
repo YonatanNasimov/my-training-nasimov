@@ -11,6 +11,7 @@ function App() {
       <VodInput/>
       <Routes>
         <Route index element={<Home/>} />
+        <Route />
       </Routes>
       <Footer/>
     </BrowserRouter>
