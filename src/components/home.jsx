@@ -10,7 +10,7 @@ function Home() {
   const [ar, setAr] = useState([]);
 
   useEffect(() => {
-    let searchQ = querys.get("s") || "dragonball"
+    let searchQ = querys.get("s") || "naruto" 
     doApi(searchQ)
   },[querys]);
 
