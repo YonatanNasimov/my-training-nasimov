@@ -19,7 +19,7 @@ function MovieInfo(props) {
       }
 
     return (
-        <div style={{ minHeight: "600px" }} className='container p-2'>
+        <main style={{ minHeight: "600px" }} className='container p-2'>
             <div className='col-md-9 mx-auto p-5'>
                 <div style={{borderRadius:"4px",justifyContent:"space-between"}} className='border shadow row bg-dark p-0'>
                     <div className='col-md-5 p-0 m-0'>
@@ -38,7 +38,7 @@ function MovieInfo(props) {
                 </div>
             </div>
 
-        </div>
+        </main>
     )
 }
 
