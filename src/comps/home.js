@@ -1,7 +1,9 @@
 import React from 'react'
 
 export default function Home() {
-  return (
-    <div>ome</div>
-  )
+    return (
+        <div className='container'>
+            Home
+        </div>
+    )
 }
