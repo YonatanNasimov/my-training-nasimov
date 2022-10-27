@@ -1,6 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { configureS } from 't';
 import AppRouter from './comps/appRouter';
+import './App.css';
 
 function App() {
   return (
