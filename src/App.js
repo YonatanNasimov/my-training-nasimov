@@ -1,13 +1,20 @@
+import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import { configureS } from 't';
 import AppRouter from './comps/appRouter';
 import './App.css';
+import counterSlice from './features/counterSlice';
+
+const myStore = configureStore({
+  reducer: {
+    counterSlice
+  }
+})
 
 function App() {
   return (
-    <div className="App">
-      <AppRouter/>
-    </div>
+    <Provider store={myStore}>
+      <AppRouter />
+    </Provider>
   );
 }
 
