@@ -1,7 +1,7 @@
 import React from 'react'
 import TodoInput from './todoInput'
 import TodoList from './todoList'
-import ".../style/home.css"
+import "../style/home.css"
 
 
 export default function AppToDo() {
