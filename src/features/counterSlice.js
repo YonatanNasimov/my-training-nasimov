@@ -9,9 +9,12 @@ const counterSlice = createSlice({
     name:"counter",
     initialState:initValue,
     reducers: {
-
+        add1:(state,actions) => {
+            state.counter++;
+        }
     }
 
 })
 
+export const {add1} = counterSlice.actions
 export default counterSlice.reducer
