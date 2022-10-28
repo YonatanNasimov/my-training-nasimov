@@ -1,7 +1,12 @@
 import React from 'react'
+import TodoInput from '../../todoRedox_comps/todoInput'
+import TodoList from '../../todoRedox_comps/todoList'
 
 export default function AppToDo() {
   return (
-    <div>AppToDo</div>
+    <div>
+      <TodoInput/>
+      <TodoList/>
+    </div>
   )
 }
