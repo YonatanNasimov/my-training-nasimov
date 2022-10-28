@@ -6,8 +6,8 @@ import Home from './home'
 export default function AppRouter() {
     return (
         <BrowserRouter>
-            <header style={{minHeight:"48px"}} className='container-fluid bg-dark text-white'>
-                <nav style={{display:"flex",justifyItems:"center",alignItems:"center"}} className='container'>
+            <header style={{minHeight:"48px",display:"flex",justifyItems:"center",alignItems:"center"}} className='container-fluid bg-dark text-white'>
+                <nav className='container'>
                     <Link className='me-2' to="/">Home</Link>
                     <Link to="/counter">Counter</Link>
                 </nav>
