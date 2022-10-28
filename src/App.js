@@ -3,10 +3,12 @@ import { Provider } from 'react-redux';
 import AppRouter from './comps/appRouter';
 import './App.css';
 import counterSlice from './features/counterSlice';
+import todoSlice from './features/todoSlice';
 
 const myStore = configureStore({
   reducer: {
-    counterSlice
+    counterSlice,
+    todoSlice
   }
 })
 
