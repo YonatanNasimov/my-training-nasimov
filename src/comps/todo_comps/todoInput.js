@@ -20,7 +20,7 @@ export default function TodoInput() {
                 <div className='col-md-8 mb-2'>
                     <label className='h5'>Exercise Name:</label>
                     <input {...exerciseNameRef} type="text" className='form-control' />
-                    {errors.name && <div className='text-danger'>* Required !!</div>}
+                    {errors.exerciseName && <div className='text-danger'>* Required !!</div>}
                 </div>
                 <div className='col-md-4'>
                     <label className='h5'> Muscle Group:</label>
@@ -32,20 +32,20 @@ export default function TodoInput() {
                         <option value="hands">Hands</option>
                         <option value="shoulders">Shoulders</option>
                     </select>
-                    {errors.color && <div className='text-danger'>* you must choose a color</div>}
+                    {errors.muscleGroup && <div className='text-danger'>* Required !!</div>}
                 </div>
                 <div className='col-md-6'>
                     <label className='h5'>Number of Sets:</label>
                     <input {...numberOfSetsRef} type="number" className='form-control' />
-                    {errors.name && <div className='text-danger'>* Required !!</div>}
+                    {errors.numberOfSets && <div className='text-danger'>* Required !!</div>}
                 </div>
                 <div className='col-md-6'>
                     <label className='h5'>Number of repetitions:</label>
                     <input {...numberOfRepetitionsRef} type="number" className='form-control' />
-                    {errors.name && <div className='text-danger'>* Required !!</div>}
+                    {errors.numberOfRepetitions && <div className='text-danger'>* Required !!</div>}
                 </div>
                 <button className='btn btn-info mt-3'>Add exercise to the list</button>
-                <button className='btn btn-danger mt-3'>Reast all</button>
+                <button type='button' className='btn btn-danger mt-3'>Reast all</button>
             </form>
         </div>
     )
