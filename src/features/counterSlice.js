@@ -11,10 +11,15 @@ const counterSlice = createSlice({
     reducers: {
         add1:(state,actions) => {
             state.counter++;
+        },
+        reastCounter:(state,actions) => {
+            state.counter = 0;
+        },
+        addcustom:(state,actions) => {
+            state.counter += actions.payload.counterVal;
         }
     }
-
 })
 
-export const {add1} = counterSlice.actions
+export const {add1,reastCounter,addcustom} = counterSlice.actions
 export default counterSlice.reducer
