@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { deleteSingleItem } from '../../features/todoSlice';
+import {sortBy} from "lodash"
 
 export default function TodoList() {
 
@@ -8,10 +9,12 @@ export default function TodoList() {
 
   const todos_ar = useSelector(state => state.todoSlice.todo_ar);
 
+  let sort_ar = sortBy(todos_ar,"muscleGroup");
+
   return (
     <div className='mx-auto col-md-6 my-2 p-2 row'>
 
-      {todos_ar.map(item => {
+      {sort_ar.map(item => {
         return (
           <div key={item.id} className='col-md-6 p-2'>
             <div className='p-2 border shadow h-100 overflow-hiden'>

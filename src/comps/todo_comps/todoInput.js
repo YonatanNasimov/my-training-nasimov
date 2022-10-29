@@ -35,11 +35,11 @@ export default function TodoInput() {
                     <label className='h5'> Muscle Group:</label>
                     <select ref={muscleGroup} className='form-select m-0'>
                         <option value="">Choose muscle group...</option>
-                        <option value="chest">Chest</option>
-                        <option value="back">Back</option>
-                        <option value="legs">Legs</option>
-                        <option value="hands">Hands</option>
-                        <option value="shoulders">Shoulders</option>
+                        <option value="Chest">Chest</option>
+                        <option value="Back">Back</option>
+                        <option value="Legs">Legs</option>
+                        <option value="Hands">Hands</option>
+                        <option value="Shoulders">Shoulders</option>
                     </select>
                 </div>
                 <div className='col-md-6'>
