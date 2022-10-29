@@ -13,9 +13,12 @@ const todoSlice = createSlice({
     reducers:{
         addNewItem:(state,action) => {
             state.todo_ar.push(action.payload.todoItem)
+        },
+        resetAllItems:(state,action) => {
+            state.todo_ar = [<h2>No exercises exist</h2>];
         }
     }
 })
 
-export const {addNewItem} = todoSlice.actions;
+export const {addNewItem ,resetAllItems} = todoSlice.actions;
 export default todoSlice.reducer;

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import {useDispatch} from "react-redux"
-import { addNewItem } from '../../features/todoSlice';
+import { addNewItem , resetAllItems} from '../../features/todoSlice';
 
 
 export default function TodoInput() {
@@ -51,7 +51,9 @@ export default function TodoInput() {
                     <input ref={numberOfRepetitions} type="number" className='form-control' />
                 </div>
                 <button onClick={onAddClick} className='btn btn-info mt-3'>Add exercise to the list</button>
-                <button className='btn btn-danger mt-3'>Reast all</button>
+                <button onClick={() =>{
+                    dispatch(resetAllItems())
+                }} className='btn btn-danger mt-3'>Reset all</button>
             </form>
         </div>
     )
