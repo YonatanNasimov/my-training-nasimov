@@ -8,7 +8,6 @@ export default function Header() {
                 <h1 className='me-5'>My Logo</h1>
                 <div style={{ display: "flex", justifyItems: "center", alignItems: "center" }}>
                     <Link className='me-3' to="/">Home</Link>
-                    <Link className='me-3' to="/counter">Counter</Link>
                     <Link to="/todoList">Todo List</Link>
                 </div>
             </nav>
