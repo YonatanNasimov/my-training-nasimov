@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import {useDispatch} from "react-redux"
-import { addNewItem , resetAllItems} from '../../features/todoSlice';
+import { useDispatch } from "react-redux"
+import { addNewItem, resetAllItems } from '../../features/todoSlice';
 
 
 export default function TodoInput() {
@@ -13,23 +13,23 @@ export default function TodoInput() {
 
     const onAddClick = () => {
         let todoObj = {
-            exerciseName:exerciseName.current.value,
-            numberOfSets:numberOfSets.current.value,
-            numberOfRepetitions:numberOfRepetitions.current.value,
-            muscleGroup:muscleGroup.current.value,
-            id:Date.now()
+            exerciseName: exerciseName.current.value,
+            numberOfSets: numberOfSets.current.value,
+            numberOfRepetitions: numberOfRepetitions.current.value,
+            muscleGroup: muscleGroup.current.value,
+            id: Date.now()
         }
         console.log(todoObj);
-        dispatch(addNewItem({todoItem:todoObj}))
+        dispatch(addNewItem({ todoItem: todoObj }))
     }
 
     return (
         <div className='container'>
-            <form onSubmit={(e) => e.preventDefault()} 
-               className='mx-auto col-md-6 p-2 row border shadow'>
+            <form onSubmit={(e) => e.preventDefault()}
+                className='mx-auto col-md-6 p-2 row border shadow'>
                 <div className='col-md-8 mb-2'>
                     <label className='h5'>Exercise Name:</label>
-                    <input ref={exerciseName} type="text" className='form-control'/>
+                    <input ref={exerciseName} type="text" className='form-control' />
                 </div>
                 <div className='col-md-4'>
                     <label className='h5'> Muscle Group:</label>
@@ -51,8 +51,8 @@ export default function TodoInput() {
                     <input ref={numberOfRepetitions} type="number" className='form-control' />
                 </div>
                 <button onClick={onAddClick} className='btn btn-info mt-3'>Add exercise to the list</button>
-                <button onClick={() =>{
-                    dispatch(resetAllItems())
+                <button onClick={() => {
+                    window.confirm("are you sure?") && dispatch(resetAllItems());
                 }} className='btn btn-danger mt-3'>Reset all</button>
             </form>
         </div>
