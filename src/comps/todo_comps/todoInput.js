@@ -1,7 +1,11 @@
 import React, { useRef } from 'react'
+import {useDispatch} from "react-redux"
+import { addNewItem } from '../../features/todoSlice';
 
 
 export default function TodoInput() {
+    const dispatch = useDispatch();
+
     const exerciseName = useRef();
     const numberOfSets = useRef();
     const numberOfRepetitions = useRef();
@@ -16,6 +20,7 @@ export default function TodoInput() {
             id:Date.now()
         }
         console.log(todoObj);
+        dispatch(addNewItem({todoItem:todoObj}))
     }
 
     return (
@@ -46,7 +51,7 @@ export default function TodoInput() {
                     <input ref={numberOfRepetitions} type="number" className='form-control' />
                 </div>
                 <button onClick={onAddClick} className='btn btn-info mt-3'>Add exercise to the list</button>
-                <button type='button' className='btn btn-danger mt-3'>Reast all</button>
+                <button className='btn btn-danger mt-3'>Reast all</button>
             </form>
         </div>
     )
