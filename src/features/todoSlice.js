@@ -2,11 +2,8 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const KEY_LOCAL = "todo_local";
 
-const initState = {
-    todo_ar: [
-        { exerciseName: "push ups", numberOfSets: 4, numberOfRepetitions: 15, muscleGroup: "Chest", id: 1 },
-        { exerciseName: "push ups2", numberOfSets: 3, numberOfRepetitions: 12, muscleGroup: "Back", id: 2 }
-    ]
+const initState = localStorage[KEY_LOCAL] ? JSON.parse(localStorage[KEY_LOCAL]) : {
+    todo_ar: []
 }
 
 const todoSlice = createSlice({
