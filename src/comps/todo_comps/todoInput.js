@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { useForm } from 'react-hook-form';
+
 
 export default function TodoInput() {
     const exerciseName = useRef();
@@ -18,29 +18,17 @@ export default function TodoInput() {
         console.log(todoObj);
     }
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-
-    const onSub = (dataBody) => {
-        delete dataBody.phone2;
-        console.log(dataBody)
-    }
-
-    const exerciseNameRef = register("exerciseName", { required: true, minLength: 2 });
-    const numberOfSetsRef = register("numberOfSets", { required: true, minLength: 1 });
-    const numberOfRepetitionsRef = register("numberOfRepetitions", { required: true, minLength: 1 });
-    const muscleGroupRef = register("muscleGroup", { required: true });
-
     return (
         <div className='container'>
-            <form onSubmit={handleSubmit(onSub)} className='mx-auto col-md-6 p-2 row border shadow'>
+            <form onSubmit={(e) => e.preventDefault()} 
+               className='mx-auto col-md-6 p-2 row border shadow'>
                 <div className='col-md-8 mb-2'>
                     <label className='h5'>Exercise Name:</label>
-                    <input ref={exerciseName} {...exerciseNameRef} type="text" className='form-control' />
-                    {errors.exerciseName && <div className='text-danger'>* Required !!</div>}
+                    <input ref={exerciseName} type="text" className='form-control'/>
                 </div>
                 <div className='col-md-4'>
                     <label className='h5'> Muscle Group:</label>
-                    <select ref={muscleGroup} {...muscleGroupRef} className='form-select m-0'>
+                    <select ref={muscleGroup} className='form-select m-0'>
                         <option value="">Choose muscle group...</option>
                         <option value="chest">Chest</option>
                         <option value="back">Back</option>
@@ -48,19 +36,16 @@ export default function TodoInput() {
                         <option value="hands">Hands</option>
                         <option value="shoulders">Shoulders</option>
                     </select>
-                    {errors.muscleGroup && <div className='text-danger'>* Required !!</div>}
                 </div>
                 <div className='col-md-6'>
                     <label className='h5'>Number of Sets:</label>
-                    <input ref={numberOfSets} {...numberOfSetsRef} type="number" className='form-control' />
-                    {errors.numberOfSets && <div className='text-danger'>* Required !!</div>}
+                    <input ref={numberOfSets} type="number" className='form-control' />
                 </div>
                 <div className='col-md-6'>
                     <label className='h5'>Number of repetitions:</label>
-                    <input ref={numberOfRepetitions} {...numberOfRepetitionsRef} type="number" className='form-control' />
-                    {errors.numberOfRepetitions && <div className='text-danger'>* Required !!</div>}
+                    <input ref={numberOfRepetitions} type="number" className='form-control' />
                 </div>
-                <button className='btn btn-info mt-3'>Add exercise to the list</button>
+                <button onClick={onAddClick} className='btn btn-info mt-3'>Add exercise to the list</button>
                 <button type='button' className='btn btn-danger mt-3'>Reast all</button>
             </form>
         </div>
