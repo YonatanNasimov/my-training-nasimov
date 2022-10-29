@@ -4,8 +4,10 @@ export default function Footer() {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <footer className='bg-dark text-center' style={{ minHeight: "48px" }}>
-
+        <footer style={{ minHeight: "48px" }} className='container-fluid bg-dark p-2 text-white text-center'>
+            <div className='container'>
+                Made by Yonathan Nasimov {year} ©
+            </div>
         </footer>
     )
 }

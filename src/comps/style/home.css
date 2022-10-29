@@ -1,5 +1,15 @@
 .myBg{
-    min-height: 700px;
+    min-height: 600px;
     background-position: center;
     background-size: cover;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.663);
 }
+.myBg1{
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.663);
+}
+
