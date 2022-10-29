@@ -8,8 +8,8 @@ export default function TodoList() {
 
       {todos_ar.map(item => {
         return (
-          <div className='col-md-6 p-2'>
-            <div key={item.id} className='p-2 border shadow h-100 overflow-hiden'>
+          <div key={item.id} className='col-md-6 p-2'>
+            <div className='p-2 border shadow h-100 overflow-hiden'>
               <img style={{ cursor: "pointer" }} className='float-end m-1 ' src='images/trash.png' alt='delete button' />
               <h4>{item.muscleGroup} : {item.exerciseName}</h4>
               <p className='h5 text-danger'>{item.numberOfRepetitions} X {item.numberOfSets}</p>
