@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer style={{ minHeight: "48px" }} className='container-fluid bg-dark p-2 text-white text-center'>
             <div className='container'>
-                Made by Yonathan Nasimov {year} ©
+                Made by Yhonatan Nasimov {year} ©
             </div>
         </footer>
     )
