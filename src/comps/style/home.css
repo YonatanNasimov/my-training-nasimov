@@ -1,4 +1,5 @@
 .myBg{
+    min-height: 600px;
     background-position: center;
     background-size: cover;
 }
