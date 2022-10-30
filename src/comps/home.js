@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./style/home.css"
 
 export default function Home() {
+    const nav = useNavigate();
 
 
 
@@ -17,7 +19,9 @@ export default function Home() {
                         Enjoy!
                     </div>
                     <div>
-                        <button className='btn btn-dark my-3'>START</button>
+                        <button onClick={() => {
+                            nav("/todoList")
+                        }} className='btn btn-dark my-3'>START</button>
                     </div>
                     <div className='mt-5'>
                         <a  title='My Linkdin' href='https://www.linkedin.com/in/yonatan-nasimov-391681248/'><img src='images/linkedin.png' alt='linkdin icon' className='me-3'/></a>      
