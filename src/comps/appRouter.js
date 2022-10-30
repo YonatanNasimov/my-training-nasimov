@@ -12,6 +12,7 @@ export default function AppRouter() {
             <Routes>
                 <Route path='/' element={<Home />}>Home</Route>
                 <Route path='/todoList' element={<AppToDo/>}>AppToDo</Route>
+                <Route path='*' element={<div style={{minHeight:"600px"}} className='text-center mt-5 display-3'>Page not fund, 404</div>}></Route>
             </Routes>
             <Footer/>
         </BrowserRouter>
