@@ -15,7 +15,8 @@ export default function Home() {
                     <div className='text-dark'>
                         <h3>A little about me and the app:</h3>
 
-                        I'm Jonathan Nasimov, I live in Ashkelon, I'm a full stack programmer and I built an application using React and Redux.
+                        I'm Yhonatan Nasimov, I live in Ashkelon, I'm a full stack developer and I built an application 
+                        that organizes your training and arranges the training for you according to muscle groups. using React and Redux.
                         Enjoy!
                     </div>
                     <div>
