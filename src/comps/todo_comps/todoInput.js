@@ -52,7 +52,7 @@ export default function TodoInput() {
                 </div>
                 <button onClick={onAddClick} className='btn btn-info mt-3'>Add exercise to the list</button>
                 <button onClick={() => {
-                    window.confirm("are you sure?") && dispatch(resetAllItems());
+                    window.confirm("are you sure you want to delete all?") && dispatch(resetAllItems());
                 }} className='btn btn-danger mt-3'>Reset all</button>
             </form>
         </div>

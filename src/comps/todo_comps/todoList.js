@@ -12,7 +12,7 @@ export default function TodoList() {
   let sort_ar = sortBy(todos_ar,"muscleGroup");
 
   return (
-    <div className='mx-auto col-md-6 my-2 p-2 row'>
+    <div className='mx-auto col-md-6 m-0 p-2 row'>
 
       {sort_ar.map(item => {
         return (
