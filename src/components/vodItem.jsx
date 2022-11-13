@@ -12,7 +12,8 @@ function VodItem(props) {
     }
     
     return (
-        <article key={item.imdbID} className='col-md-3 p-2'>
+        
+        <article className='col-md-3 p-2'>
             <div className='border shadow h-100 overflow-hiden'>
                 <img src={image} className='me-2 w-100' alt={item.Title} />
                 <div className='p-2'>
